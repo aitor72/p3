@@ -7,16 +7,20 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
     """
-
+    # We check if the input number is negative
     if number < 0:
         return None
 
+
+    # We check if the input number 0 or 1.
     if (number == 0) or (number == 1):
         return number
 
+    # Declare main variables for the algorithm
     sqrt = number / 2;
     temp = 0;
 
+    # While sqrt not equals temp keep searching
     while(sqrt != temp):
         temp = sqrt;
         sqrt = ( number/temp + temp) / 2;
