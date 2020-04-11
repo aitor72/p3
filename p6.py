@@ -5,7 +5,16 @@ def get_min_max(ints):
     Args:
        ints(list): list of integers containing one or more integers
     """
-   pass
+    max_value = ints[0];
+    min_value = ints[0];
+    for num in ints:
+    	if (num > max_value):
+    		max_value = num
+    	if (num < min_value):
+    		min_value = num
+
+    return (min_value,max_value)
+
 
 ## Example Test Case of Ten Integers
 import random
