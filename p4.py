@@ -5,7 +5,25 @@ def sort_012(input_list):
     Args:
        input_list(list): List to be sorted
     """
-    pass
+    zero_index = 0
+    two_index = len(input_list) - 1
+    index = 0
+
+    while(index) < two_index + 1:
+        current = input_list[index]
+
+        if current == 0:
+            input_list[index] = input_list[zero_index]
+            input_list[zero_index] = current
+            zero_index += 1
+            index += 1
+        elif current == 1:
+            index += 1
+        elif current == 2:
+            input_list[index] = input_list[two_index]
+            input_list[two_index] = current
+            two_index -= 1
+    return input_list
 
 def test_function(test_case):
     sorted_array = sort_012(test_case)
