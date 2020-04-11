@@ -7,7 +7,33 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
-   pass
+
+    # First step
+    index = 0
+    while input_list[index] < input_list[index + 1]:
+        index += 1
+        if index + 1 == len(input_list):
+            index = len(input_list) // 2
+            break
+    index += 1
+
+    if number in input_list[:index]:
+        center = len(input_list[:index]) // 2
+    else:
+        center = index + (len(input_list[index:]) // 2)
+
+    while input_list[center] != number:
+        if center == index:
+            return -1
+        if input_list[center] < number:
+            center += 1
+        else:
+            center -= 1
+
+        if center < 0 or center >= len(input_list):
+            return -1
+
+    return center
 
 def linear_search(input_list, number):
     for index, element in enumerate(input_list):
