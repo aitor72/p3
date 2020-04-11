@@ -8,7 +8,18 @@ def rotated_array_search(input_list, number):
        int: Index or -1
     """
 
-    # First step
+    # If input list is empty
+    if(len(input_list) == 0):
+        return -1;
+
+    # If input list is only one
+    if(len(input_list) == 1):
+        if (input_list[0] == number):
+            return 0;
+        else:
+            return -1;
+
+
     index = 0
     while input_list[index] < input_list[index + 1]:
         index += 1
@@ -49,8 +60,19 @@ def test_function(test_case):
     else:
         print("Fail")
 
+# Default Udacity test cases:
+print("\nNormal cases:")
 test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
 test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+
+
+# Edge cases added by me:
+print("\nEdge cases:")
+
+test_function([[], 1])
+test_function([[1], 1])
+test_function([[1,2,4,5,4,43534,5243,5235,235,235,23523,412,312,423,5436,56765,734,4214,32534,634,534523,4123,312,4234542,52344,13], 4])
+
