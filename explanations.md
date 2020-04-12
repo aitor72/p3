@@ -3,6 +3,7 @@
 Hello, my name is Aitor Rodriguez and in this file i'm going to explain the algorithms I used to solve each problem. Let's go!
 
 ## Problem 1
+Time complexity is O(log n) due to tha fact that in the  worst case we search through half of half of an array.
 
 
 ## Problem 2
