@@ -7,7 +7,18 @@ def rearrange_digits(input_list):
     Returns:
        (int),(int): Two maximum sums
     """
-    pass
+    input_list = sorted(input_list, reverse=True)
+    first = ''
+    second = ''
+    status = True
+    for number in input_list:
+        if status:
+            first += str(number)
+            status = False
+        else:
+            second += str(number)
+            status = True
+    return [int(first), int(second)]
 
 def test_function(test_case):
     output = rearrange_digits(test_case[0])
