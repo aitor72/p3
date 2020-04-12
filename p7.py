@@ -74,10 +74,21 @@ router = Router("root handler", "not found handler") # remove the 'not found han
 router.add_handler("/home/about", "about handler")  # add a route
 
 # some lookups with the expected output
+"""
 print(router.lookup("/")) # should print 'root handler'
 print(router.lookup("/home")) # should print 'not found handler' or None if you did not implement one
 print(router.lookup("/home/about")) # should print 'about handler'
 print(router.lookup("/home/about/")) # should print 'about handler' or None if you did not handle trailing slashes
 print(router.lookup("/home/about/me")) # should print 'not found handler' or None if you did not implement one
+"""
+
+# Default Udacity test cases:
+print("\nNormal cases:")
+print ("Pass" if  ("root handler" == router.lookup("/")) else "Fail")
+print ("Pass" if  ("not found handler" == router.lookup("/home")) else "Fail")
+print ("Pass" if  ("about handler" == router.lookup("/home/about")) else "Fail")
+print ("Pass" if  ("about handler" == router.lookup("/home/about/")) else "Fail")
+print ("Pass" if  ("not found handler" == router.lookup("/home/about/me")) else "Fail")
+print ("Pass" if  ("not found handler" == router.lookup(".")) else "Fail")
 
 
