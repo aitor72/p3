@@ -19,6 +19,11 @@ Time complexity is O(log n) due to tha fact that in the  worst case we search th
 
 
 ## Problem 5
+To solve this problem i use  a Trie with DFS In-order search. 
+The time complexity for insert and find is O(n).
+
+Time complexity for suffixes is O(V + E) where V is the vertices and E is the edges. 
+
 
 
 ## Problem 6
