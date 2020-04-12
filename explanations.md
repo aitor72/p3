@@ -11,7 +11,7 @@ Hello, my name is Aitor Rodriguez and in this file i'm going to explain the algo
 ## Problem 3
 | Time Complexity      | The time complexity is `O(n log(n))`.                           |
 | -------------------- | ------------------------------------------------------------ |
-| Explanation | Single function that inputs an array from which we return the resulting two maximum sums. |
+| Explanation | Our functions gets as the input an array of numbers and returns the tupple of the max sums. |
 
 
 ## Problem 4
