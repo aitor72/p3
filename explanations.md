@@ -21,3 +21,8 @@ Hello, my name is Aitor Rodriguez and in this file i'm going to explain the algo
 
 
 ## Problem 7
+| Time Complexity      | The time complexity is `O(1)`.                           |
+| -------------------- | ------------------------------------------------------------ |
+| **Space Complexity** | The space complexity is `O(1)`. No extra space is required to use this algorithm. |
+
+We solve this problem using a Trie and node as is asked in the sample code of the problem. The handler splits the path to insert a new node which can then be traversed for the lookup.
